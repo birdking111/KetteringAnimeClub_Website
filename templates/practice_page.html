@@ -2,8 +2,34 @@
 <html>
   <head>
     <title>Practice page</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="../public/js/handlebars-v3.0.3.js"></script>
+	<script src="../public/js/app.js"></script>
   </head>
   <body>
-
+    <div id="navigation"></div>
+    <div id="output">
+	  I am getting output.
+	</div>
+	
+	<script id="navigation-bar" type="text/x-handlebars-template">
+	  <nav>
+	    <ul>
+		  {{#list nav}}
+            <a href="{{url}}">{{title}}</a>
+          {{/list}}
+		</ul>
+	  </nav>
+	</script>
+	
+	<script id="entry-template" type="text/x-handlebars-template">
+    <div class="entry">
+      <h1>{{title}}</h1>
+    <div class="body">
+      {{body}}
+    </div>
+    </div>
+    </script>
+	
   </body>
 </html>
