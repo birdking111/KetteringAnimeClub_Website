@@ -7,24 +7,24 @@ Home Page
   ~Weekly Showings
   ~Shameless plug for anime club shirt
   
-About Us
+About Us (1 page)
   ~A brief history
   ~Our reputation
   ~FAQ
   
-rules:
+rules: (1 page)
   ~Club goer's behavior
   ~What can we watch
   ~Requesting capital
   ~How does club work
   ~borrowing anime
 
-Club Showings
+Club Showings (1 page)
   ~This week's show
   ~This week's movie (place before or after show depending on order)
   ~Current anime polls
   
-Events:
+Events: (3 pages)
   specifics: -description
              -activities
              -gallery link
@@ -33,12 +33,12 @@ Events:
   ~Anime Fest
   ~Sushi Night
   
-Recomend Anime:
+Recomend Anime: (1 page)
   ~link to rules page
   ~form to submit to database
   ~errors for: anime owned, form incomplete
   
-Our collection:
+Our collection: (1 page)
   ~Link a database to a table of ALL the shows we own.
   
 Cool features to include:

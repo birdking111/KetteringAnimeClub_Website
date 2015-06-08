@@ -14,14 +14,22 @@
 	
 	<script id="navigation-bar" type="text/x-handlebars-template">
 	  <nav>
-	    <ul>
-		  {{#list nav}}
-            <a href="{{url}}">{{title}}</a>
+	    <ul> 
+	      {{#list nav}}
+            <li>{{{anchor}}}{{title}}</a></li>
           {{/list}}
 		</ul>
 	  </nav>
 	</script>
 	
+	<script id="navigation-subbar" type="text/x-handlebars-template">
+	  <ul>
+	    {{#list nav}}
+          <li>{{{anchor}}}{{title}}</a></li>
+        {{/list}}
+	  <ul>
+	
+	</script>
 	<script id="entry-template" type="text/x-handlebars-template">
     <div class="entry">
       <h1>{{title}}</h1>
