@@ -1,4 +1,4 @@
-function getNavBar(){
+function createNav(){
 		
 		//Create an iterator helper for lists
 		Handlebars.registerHelper('list', function(context, options) {
@@ -32,18 +32,6 @@ function getNavBar(){
 				
 		$("#navigation").html(el_html);
 		
-		//quickly insert a placeholder for the submenu, hide it
-		//$("<div id='events'></div>").attr('hidden', true).insertAfter(".dropdown-button");
-		$("<div id='events'></div>").insertAfter(".dropdown-button");
-		
-		//insert a hover event
-		//$(".dropdown-button").hover(function(){
-		//	$("#events").removeAttr('hidden');
-		//},
-		//function(){
-		//	$("#events").attr('hidden',true);
-		//});
-		
 		//repeat steps for declaring submenu
 		source   = $("#navigation-subbar").html();
 		template = Handlebars.compile(source);
@@ -57,14 +45,17 @@ function getNavBar(){
 		
 		el_html = template(context);
 		
-		$("#events").html(el_html);
+		//console.log(el_html);
+		
+		//insert the template instead of rendering it in a div tag.
+		$(el_html).insertAfter(".dropdown-button");
 	};
 	  
 
 $(document).ready(function(){
       
 	  //create navigation bar
-	  var navigation = getNavBar()
+	  var navigation = createNav()
 	  
 	  //compile the body
 	  var source   = $("#entry-template").html();
@@ -74,5 +65,5 @@ $(document).ready(function(){
 	  var context = {title: "My New Post", body: "This is my first post!"};
       var el_html = template(context);
 	  
-	  $("#output").html(el_html);
+	  $("#content").html(el_html);
 });

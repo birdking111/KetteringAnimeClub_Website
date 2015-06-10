@@ -8,37 +8,46 @@
 	<script src="../public/js/app.js"></script>
   </head>
   <body>
-    <div id="navigation"></div>
-    <div id="output">
+  
+    <!--- Head bar for future logo --->
+    <div id="header">
+	  Kettering Anime Club
+	</div>
+	
+	<!--- Navigation bar --->
+	<div id="navigation" class="clearfix"></div>
+	
+	<!--- Space for text content --->
+    <div id="content">
 	  I am getting output.
 	</div>
 	
-	<script id="navigation-bar" type="text/x-handlebars-template">
-	  <nav>
+    <script id="navigation-bar" type="text/x-handlebars-template">
+      <nav>
 	    <ul> 
 	      {{#list nav}}
-            <li>{{{anchor}}}{{title}}</a></li>
-          {{/list}}
+		  <li>{{{anchor}}}{{title}}</a></li>
+		  {{/list}}
 		</ul>
-	  </nav>
-	</script>
-	
-	<script id="navigation-subbar" type="text/x-handlebars-template">
+      </nav>
+    </script>
+
+    <script id="navigation-subbar" type="text/x-handlebars-template">
 	  <ul>
 	    {{#list nav}}
-          <li>{{{anchor}}}{{title}}</a></li>
+		<li>{{{anchor}}}{{title}}</a></li>
         {{/list}}
-	  <ul>
-	
-	</script>
-	<script id="entry-template" type="text/x-handlebars-template">
-    <div class="entry">
-      <h1>{{title}}</h1>
-    <div class="body">
-      {{body}}
-    </div>
-    </div>
+      </ul>
     </script>
-	
+
+    <script id="entry-template" type="text/x-handlebars-template">
+      <div class="entry">
+        <h1>{{title}}</h1>
+        <div class="body">
+          {{body}}
+        </div>
+      </div>
+    </script>
+
   </body>
 </html>

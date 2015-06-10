@@ -1,14 +1,11 @@
 @import url(reset.css);
-
-body {}
+@import url(skeleton.css)
 
 nav {
   width: 100%;
   float: left;
   margin: 0 0 3em 0;
-  padding: 0;
   list-style: none;
-  background-color: #f2f2f2;
   border-bottom: 1px solid #ccc; 
   border-top: 1px solid #ccc;
 }
@@ -17,7 +14,7 @@ nav ul ul {
 	display: none;
 }
 
-nav ul li:hover > div ul {
+nav ul li:hover > ul {
   display: block;
 }
 
@@ -25,23 +22,27 @@ nav ul {
   padding: 0 20px;
   border-radius: 10px;
   list-style: none;
-  display: inline-table
+  display: inline-table;
 }
 
 nav ul: after {}
 
 nav ul li{
   float: left;
+  position: relative;
 }
 
 nav ul li:hover {}
 
-nav ul li:hover a {}
+nav ul li:hover a {
+  content: ""; 
+  clear: both; 
+  display: block;
+}
 
 nav ul li a {
   display: block;
-  padding : 25px 40px;
-  color: #001932;
+  padding : 15px 30px;
   text-decoration: none;
   border-right: 1px solid #ccc;
 }
@@ -65,3 +66,38 @@ nav ul ul li a {
 }
 
 nav ul ul li a:hover {}
+
+* html .clearfix {
+    height: 1%;
+}
+.* html .clearfix {
+    height: 1%;
+}
+.clearfix {
+    display: block;
+}
+    .clearfix:after {
+        clear: both;
+        content: " ";
+        display: block;
+        font-size: 0;
+        height: 0;
+        visibility: hidden;
+    }
+ {
+    display: block;
+}
+    .clearfix:after {
+        clear: both;
+        content: " ";
+        display: block;
+        font-size: 0;
+        height: 0;
+        visibility: hidden;
+    }
+
+#header {
+  width: 100%;
+  margin: 2.5em 0;
+  padding: 0 1em;
+}
