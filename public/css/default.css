@@ -67,35 +67,6 @@ nav ul ul li a {
 
 nav ul ul li a:hover {}
 
-* html .clearfix {
-    height: 1%;
-}
-.* html .clearfix {
-    height: 1%;
-}
-.clearfix {
-    display: block;
-}
-    .clearfix:after {
-        clear: both;
-        content: " ";
-        display: block;
-        font-size: 0;
-        height: 0;
-        visibility: hidden;
-    }
- {
-    display: block;
-}
-    .clearfix:after {
-        clear: both;
-        content: " ";
-        display: block;
-        font-size: 0;
-        height: 0;
-        visibility: hidden;
-    }
-
 #header {
   width: 100%;
   margin: 2.5em 0;
