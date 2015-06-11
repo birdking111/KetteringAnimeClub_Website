@@ -8,20 +8,25 @@
 	<script src="../public/js/app.js"></script>
   </head>
   <body>
-  
-    <!--- Head bar for future logo --->
-    <div id="header">
-	  Kettering Anime Club
-	</div>
-	
-	<!--- Navigation bar --->
-	<div id="navigation"></div>
-	
-	<!--- Space for text content --->
-    <div id="content">
-	  I am getting output.
-	</div>
-	
+  <div class="container">
+    <div class="row">
+      <!--- Head bar for future logo --->
+	  <div id="header" class="twelve columns">Kettering Anime Club</div>
+    </div>
+    <div class="row">
+	  <!--- Navigation bar --->
+	  <div class="two columns"></div>
+	  <div id="navigation" class="eight columns"></div>
+      <div class="two columns"></div>    
+    </div>
+	<div class="row">
+	  <div class="one-third"></div>
+	  <!--- Space for text content --->
+      <div id="content" class="one-third">I am getting output.</div>
+	  <div class="one-third"></div>
+    </div>
+  </div>
+  </div>  
     <script id="navigation-bar" type="text/x-handlebars-template">
       <nav>
 	    <ul> 
