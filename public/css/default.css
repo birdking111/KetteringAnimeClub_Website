@@ -1,78 +1,32 @@
 @import url(reset.css);
 @import url(skeleton.css);
-
-nav {
-  width: 100%;
-  float: left;
-  margin: 0 0 3em 0;
-  list-style: none;
-  border-bottom: 1px solid #ccc; 
-  border-top: 1px solid #ccc;
-}
-
-nav ul ul {
-	display: none;
-}
-
-nav ul li:hover > ul {
-  display: block;
-}
-
-nav ul {
-  padding: 0 20px;
-  border-radius: 10px;
-  list-style: none;
-  display: inline-table;
-}
-
-nav ul: after {
-  content: ""; 
-  clear: both; 
-  display: block;
-}
-
-nav ul li{
-  float: left;
-  position: relative;
-}
-
-nav ul li:hover {}
-
-nav ul li:hover a {
-  content: ""; 
-  clear: both; 
-  display: block;
-}
-
-nav ul li a {
-  display: block;
-  padding : 15px 30px;
-  text-decoration: none;
-  border-right: 1px solid #ccc;
-}
-
-nav ul ul {
-  border-radius: 0px;
-  padding: 0;
-  position: absolute;
-  top: 100%;
-}
-
-nav ul ul li {
-  float: none;
-  border-top: 1px solid #ccc;
-  border-bottom: 1px solid #ccc;
-  position: relative;
-}
-
-nav ul ul li a {
-  padding: 15px 40px;
-}
-
-nav ul ul li a:hover {}
+@import url(navbar.css);
 
 #header {
   width: 100%;
   margin: 2.5em 0;
   padding: 0 1em;
+}
+
+.entry {
+  border-radius: 1.25em;
+  background: #001429;
+  width: 100%; 
+  padding: 1em 0;
+}
+
+.entry h1 {
+  border-radius: .25em;
+  background: #E6E8EA;
+  margin-right: 2%;
+  margin-left: 2%;
+  padding: 1rem 2rem;
+}
+
+.entry .body{
+  border-radius: .25em;
+  background: #E6E8EA;
+  margin-right: 2%;
+  margin-left: 2%;
+  padding: 1rem 2rem;
 }
