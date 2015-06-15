@@ -15,7 +15,7 @@ nav ul {
   padding: 0 2%;
   list-style: none;
   position: relative;
-  display: inline-table;
+  display: block;
 }
 
 nav ul: after {
@@ -37,15 +37,18 @@ nav ul li:hover a {
 nav ul li a {
   display: block;
   padding: 2rem 3.25rem;
+  
 }
 
 nav ul ul {
   padding: 0;
   position: absolute;
   top: 100%;
+  background: gold;
 }
 
 nav ul ul li {
+  margin: 0;
   float: none;
   position: relative
 }

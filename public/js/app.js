@@ -37,6 +37,7 @@ function createNav(){
 		template = Handlebars.compile(source);
 		context  = {
 			nav: [
+			  {anchor: "<a href=''>", title: "Events"},
 			  {anchor: "<a href=''>", title: "KU Con"},
 			  {anchor: "<a href=''>", title: "Anime Fest"},
 			  {anchor: "<a href=''>", title: "Sushi Night"},
@@ -66,4 +67,6 @@ $(document).ready(function(){
       var el_html = template(context);
 	  
 	  $("#content").html(el_html);
+	  
+	  
 });
