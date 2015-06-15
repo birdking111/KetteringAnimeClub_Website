@@ -1,0 +1,22 @@
+//get the current template from the #href
+function fetchTemplate() {
+  var hash = window.location.hash || '#home';
+  return hash.replace(/[#/!]/g, '');
+}
+
+$(window).bind('hashchange', function(){
+  //recognize the source template from URL
+  var source   = $(fetchTemplate()).html();
+  
+  var template = Handlebars.compile(source);
+	  
+  //set the template's context
+  var context = [
+  
+  ];
+  
+  //create an insert variable
+  var el_html = template(context);
+  
+  $().html(el_html);
+});

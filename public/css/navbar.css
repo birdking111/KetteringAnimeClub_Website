@@ -7,7 +7,7 @@ nav ul ul {
 }
 
 nav ul li:hover > ul {
-  display: block;
+  display: inline;
 }
 
 nav ul {
@@ -15,7 +15,7 @@ nav ul {
   padding: 0 2%;
   list-style: none;
   position: relative;
-  display: block;
+  display: inline-table;
 }
 
 nav ul: after {
