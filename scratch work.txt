@@ -1,22 +1,42 @@
 //get the current template from the #href
 function fetchTemplate() {
-  var hash = window.location.hash || '#home';
+  var hash = window.location.hash || '#home-page';
   return hash.replace(/[#/!]/g, '');
 }
 
 $(window).bind('hashchange', function(){
-  //recognize the source template from URL
-  var source   = $(fetchTemplate()).html();
+  //declare the url hash to a variable
+  var currentPage = fetchTemplate();
+  
+  //in case the current page is an event, change the source
+  if (currentPage.contains("-event")) var source = $("event-page").html();
+  else var source = $(fetchTemplate()).html();
+  
   
   var template = Handlebars.compile(source);
 	  
-  //set the template's context
-  var context = [
-  
-  ];
+  //set the template's context from a hash
+  //with the same hashvariable used for source
+  var context = contextHash[];
   
   //create an insert variable
   var el_html = template(context);
-  
-  $().html(el_html);
+  //place into the context area
+  $("#content").html(el_html);
 });
+
+//hashmap to hold all of the contexts for all templates.
+
+//define the context map
+var contextHash = {};
+
+//declare context
+contextHash['home-page'] = {title: "Welcome to the KU Anime Club", body: "Greetings fellow lover of Japanimation. Welcome to our club!}
+contextHash['about-page'] = {};
+contextHash['rules-page'] = {};
+contextHash['showings-page'] = {};
+contextHash['recommend-page'] = {};
+contextHash['collection-page'] = {};
+contextHash['kucon-event'] = {};
+contextHash['animefest-event'] = {};
+contextHash['sushinight-event'] = {};
