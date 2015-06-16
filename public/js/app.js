@@ -9,15 +9,42 @@ function hashContexts() {
   //define the context map
   var contextHash = {
     //declare context
-    '#home-page': {title: "Welcome to the KU Anime Club", body: "Greetings fellow lover of Japanimation. Welcome to our club!"},
-    '#about-page': {},
-    '#rules-page' : {},
-    '#showings-page' : {},
-    '#recommend-page' : {},
-    '#collection-page' : {},
-    '#kucon-event' : {},
-    '#animefest-event' : {},
-    '#sushinight-event' : {},
+    '#home-page': {
+		title: "Welcome to the KU Anime Club", 
+		body: "Greetings fellow lover of Japanimation. Welcome to our club!"
+		},
+    '#about-page': {
+	    title: "About us", 
+		body: "Greetings fellow lover of Japanimation. Welcome to our club!"
+	},
+    '#rules-page' : {
+		title: "Club's Rules", 
+		body: "Greetings fellow lover of Japanimation. Welcome to our club!"	
+	},
+    '#showings-page' : {
+		title: "What's Playing This Week?", 
+		body: "Greetings fellow lover of Japanimation. Welcome to our club!"
+	},
+    '#recommend-page' : {
+		title: "Is There Something You'd Like to See Us Buy?", 
+		body: "Greetings fellow lover of Japanimation. Welcome to our club!"
+	},
+    '#collection-page' : {
+		title: "See What Shows We Have In Stock", 
+		body: "Greetings fellow lover of Japanimation. Welcome to our club!"
+	},
+    '#kucon-event' : {
+		title: "KU Con", 
+		body: "Greetings fellow lover of Japanimation. Welcome to our club!"
+	},
+    '#animefest-event' : {
+		title: "Animefest! Grab Your Pillows!", 
+		body: "Greetings fellow lover of Japanimation. Welcome to our club!"
+	},
+    '#sushinight-event' : {
+		title: "Free Sushi Night", 
+		body: "Greetings fellow lover of Japanimation. Welcome to our club!"
+	},
   };
   
   return contextHash;
@@ -31,17 +58,12 @@ function constructContent() {
   if (currentPage.contains("-event")) var source = $("event-page").html();
   else var source = $(fetchTemplate()).html();
   
-  console.log("Source = " + source);
-  console.log("currentPage = " + currentPage);
-  
   var template = Handlebars.compile(source);
 	  
   //set the template's context from a hash
   //with the same hashvariable used for source
   var contextHash = hashContexts();
   var context = contextHash[currentPage];
-  
-  console.log("Context = " + contextHash[currentPage]);
   
   //create an insert variable
   var el_html = template(context);
@@ -88,7 +110,6 @@ function createNav(){
 		template = Handlebars.compile(source);
 		context  = {
 			nav: [
-			  {anchor: "<a href='!#'>", title: "Events"},
 			  {anchor: "<a href='#kucon-event'>", title: "KU Con"},
 			  {anchor: "<a href='#animefest-event'>", title: "Anime Fest"},
 			  {anchor: "<a href='sushinight-event'>", title: "Sushi Night"},
@@ -107,7 +128,9 @@ function createNav(){
 $(document).ready(function(){
       
 	  //create navigation bar
-	  var navigation = createNav()
+	  createNav()
 	  
 	  constructContent();
+	  
+	  window.onhashchange = constructContent;
 });

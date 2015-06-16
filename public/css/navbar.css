@@ -1,5 +1,5 @@
 nav {
-  
+  width: 100%;
 }
 
 nav ul ul {
@@ -11,11 +11,12 @@ nav ul li:hover > ul {
 }
 
 nav ul {
-  width: 98%;
-  padding: 0 2%;
   list-style: none;
-  position: relative;
+  margin: 0;
+  padding: 0;
   display: inline-table;
+  position: relative;
+  width: 100%;
 }
 
 nav ul: after {
@@ -24,6 +25,8 @@ nav ul: after {
 
 nav ul li{
   float: left;
+  margin-bottom: 0;
+  display: table-cell;
 }
 
 nav ul li:hover {
@@ -36,25 +39,27 @@ nav ul li:hover a {
 
 nav ul li a {
   display: block;
-  padding: 2rem 3.25rem;
-  
+  padding: 2rem 34.7857px;
+  text-decoration: none;
+  background: gold;
 }
 
 nav ul ul {
   padding: 0;
   position: absolute;
   top: 100%;
-  background: gold;
+  margin: 0;
 }
 
 nav ul ul li {
   margin: 0;
   float: none;
-  position: relative
+  position: relative;
 }
 
 nav ul ul li a {
   padding: 15px 40px;
+  background: blue;
 }
 
 nav ul ul li a:hover {
