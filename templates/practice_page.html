@@ -43,7 +43,7 @@
       <div class="entry">
         <h1>{{title}}</h1>
         <div class="body">
-          {{body}}
+          <p>{{body}}</p>
         </div>
       </div>
     </script>
@@ -52,7 +52,15 @@
 	  <div class="entry">
         <h1>{{title}}</h1>
         <div class="body">
-          {{body}}
+          {{#each section}}
+		    <h2>{{headline}}</h2>
+			<p>{{article}}</p>
+		  {{/each}}
+		  <h2>Frequently Asked Questions</h2>
+		  {{#each faq}}
+		    <h3>{{question}}</h3>
+			<p>{{response}}</p>
+		  {{/each}}
         </div>
       </div>
 	</script>

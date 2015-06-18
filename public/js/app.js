@@ -15,7 +15,18 @@ function hashContexts() {
 		},
     '#about-page': {
 	    title: "About us", 
-		body: "Greetings fellow lover of Japanimation. Welcome to our club!"
+		section:  [
+		  {headline: "Our History at Kettering", article: "Four score and seven years ago..."},
+		  {headline: "Our Reputation as a Club", article: "We might not be the most popular, but we are one of the only clubs in Michigan that let's the proper companies know about our public showings, a rule which many clubs neglect."},
+		],
+		faq:   [
+		  {question: "What type of shows do we watch?", response: "We try to have a variety of shows on hand and in the polls."},
+		  {question: "How long are the shows we watch?", response: "We will only watch a series that is atmost 26 episodes."},
+		  {question: "Can we watch something on Crunchyroll?", response: "We cannot show Crunchyroll due to their terms for public showings."},
+		  {question: "Do we watch Hentai?", response: "We do not watch Hentai in club and to clarify matters, judge if an anime is hentai by whether it is or is not worse then Rin: Daughters of Myinosuke."},
+		  {question: "At what point will we watch Boku no Pico?", response: "If any of us has Boku no Pico and we vote to watch. Either of which are unlikely."}
+		],
+	
 	},
     '#rules-page' : {
 		title: "Club's Rules", 
@@ -51,6 +62,11 @@ function hashContexts() {
 };
 
 function constructContent() {
+  //Begin declaring helpers
+  //Starting with a simple each helper
+  
+  //Helpers end here
+  
   //declare the url hash to a variable
   var currentPage = fetchTemplate();
   
@@ -79,7 +95,7 @@ function createNav(){
 
           for(var i=0, j=context.length; i<j; i++) {
             ret = ret + options.fn(context[i]);
-            }
+          }
 
           return ret;
         });
@@ -126,11 +142,10 @@ function createNav(){
 	  
 
 $(document).ready(function(){
-      
-	  //create navigation bar
-	  createNav()
+  //create navigation bar
+  createNav();
 	  
-	  constructContent();
+  constructContent();
 	  
-	  window.onhashchange = constructContent;
+  window.onhashchange = constructContent;
 });
